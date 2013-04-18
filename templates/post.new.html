@@ -1,0 +1,27 @@
+{% extends '_base.html' %}
+
+{% block title %} - New{% endblock %}
+
+{% block body %}
+<h1>Create New Post</h1>
+
+<form action="{{ url_for('post_create') }}" method="post">
+    <p>
+        <textarea
+            name="content"
+            placeholder="Share something here..."
+            required
+        ></textarea>
+    </p>
+    <p>
+        <input
+            name="tags"
+            type="text"
+            placeholder="Tag your post. Seperate with whitespace."
+        />
+    </p>
+    <p>
+        <button type="submit">Post</button>
+    </p>
+</form>
+{% endblock %}
